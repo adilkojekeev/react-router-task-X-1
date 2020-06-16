@@ -16,7 +16,7 @@ const TaskItem = (props) => {
           </button>
           <input
             type="text"
-            className="bg-grey-200 rounded p-1"
+            className="bg-grey-200 rounded p-1 "
             value={taskName}
             onChange={(e) => setTaskName(e.target.value)}
           />
@@ -25,18 +25,18 @@ const TaskItem = (props) => {
         <span>
           <button
             type="button"
-            className="bg-green-500 m-1 p-1 rounded"
+            className="bg-gray-500 m-1 p-1 rounded"
             onClick={() => setEditMod(true)}
           >
             Edit
           </button>
         </span>
       )}
-      {props.title}
+      <span className="border-b border-gray-500">{props.title}</span>
       {props.status === 'new' ? (
         <button
           type="button"
-          className="bg-green-500 m-1 p-1 rounded"
+          className="bg-gray-500 m-1 p-1 rounded"
           onClick={() => props.updateStatus('in progress', props.taskId)}
         >
           In progress
@@ -48,7 +48,7 @@ const TaskItem = (props) => {
         <div className="inline">
           <button
             type="button"
-            className="bg-green-500 m-1 p-1 rounded"
+            className="bg-red-500 m-1 p-1 rounded"
             onClick={() => props.updateStatus('blocked', props.taskId)}
           >
             Block
@@ -67,7 +67,7 @@ const TaskItem = (props) => {
       {props.status === 'blocked' ? (
         <button
           type="button"
-          className="bg-green-500 m-1 p-1 rounded"
+          className="bg-red-500 m-1 p-1 rounded"
           onClick={() => props.updateStatus('new', props.taskId)}
         >
           block

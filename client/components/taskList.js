@@ -51,13 +51,13 @@ const TaskList = (props) => {
         </ul>
 
         <input
-          className=" p-1 rounded"
+          className=" p-1 rounded border border-gray-500"
           placeholder="Add task"
           type="text"
           onChange={(e) => setNewTask(e.target.value)}
         />
         <button
-          className="bg-gray-500 p-1 rounded"
+          className="bg-gray-500 p-1 rounded ml-2"
           type="button"
           onClick={() => props.addTask(newTask)}
         >
